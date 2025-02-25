@@ -99,12 +99,13 @@ namespace Demo
 		{
 			var position = satellite.GetPosition(_time);
 
-			return new GQIRow(new[]
+			var cells = new[]
 			{
 				new GQICell { Value = satellite.Name },
 				new GQICell { Value = position.Latitude },
 				new GQICell { Value = position.Longitude },
-			});
+			};
+			return new GQIRow(cells);
 		}
 
 		public OnDestroyOutputArgs OnDestroy(OnDestroyInputArgs args)

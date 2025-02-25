@@ -83,12 +83,13 @@ namespace Demo
 			var rowKey = satellite.Name;
 			var position = satellite.GetPosition(_time);
 
-			return new GQIRow(rowKey, new[]
+			var cells = new[]
 			{
 				new GQICell { Value = satellite.Name },
 				new GQICell { Value = position.Latitude },
 				new GQICell { Value = position.Longitude },
-			});
+			};
+			return new GQIRow(rowKey, cells);
 		}
 
 		public OnDestroyOutputArgs OnDestroy(OnDestroyInputArgs args)
