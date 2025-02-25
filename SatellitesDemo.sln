@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatellitesDemo", "SatellitesDemo\SatellitesDemo.csproj", "{9F9EF703-E38F-4BC6-AB03-9AEA77BFECE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{0DFC096D-7CDE-4A5B-8A85-829F41E23C57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analysis", "{596F245D-EF97-4341-ACA0-89F02AAEE40C}"
+	ProjectSection(SolutionItems) = preProject
+		Internal\Code Analysis\qaction-debug.ruleset = Internal\Code Analysis\qaction-debug.ruleset
+		Internal\Code Analysis\qaction-release.ruleset = Internal\Code Analysis\qaction-release.ruleset
+		Internal\Code Analysis\stylecop.json = Internal\Code Analysis\stylecop.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F9EF703-E38F-4BC6-AB03-9AEA77BFECE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9EF703-E38F-4BC6-AB03-9AEA77BFECE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9EF703-E38F-4BC6-AB03-9AEA77BFECE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9EF703-E38F-4BC6-AB03-9AEA77BFECE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{596F245D-EF97-4341-ACA0-89F02AAEE40C} = {0DFC096D-7CDE-4A5B-8A85-829F41E23C57}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63FCA0C4-6339-4CF8-BE76-4E0E6DC51FD7}
+	EndGlobalSection
+EndGlobal
