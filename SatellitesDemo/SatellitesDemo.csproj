@@ -13,20 +13,10 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.5.2.2" />
+		<PackageReference Include="Skyline.DataMiner.Empower.SatellitesDemo" Version="1.0.0-preview" />
 		<PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="1.2.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-	</ItemGroup>
-	<ItemGroup>
-	  <Reference Include="Satellites">
-	    <HintPath>Dlls\Satellites.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Zeptomoby.OrbitTools.Core">
-	    <HintPath>Dlls\Zeptomoby.OrbitTools.Core.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Zeptomoby.OrbitTools.Orbit">
-	    <HintPath>Dlls\Zeptomoby.OrbitTools.Orbit.dll</HintPath>
-	  </Reference>
 	</ItemGroup>
 </Project>
