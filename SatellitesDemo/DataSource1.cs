@@ -1,3 +1,5 @@
+using System.Linq;
+using Satellites;
 using Skyline.DataMiner.Analytics.GenericInterface;
 
 namespace Demo
@@ -23,36 +25,28 @@ namespace Demo
 
 		public GQIPage GetNextPage(GetNextPageInputArgs args)
 		{
-			// Define some static data
-			// Each row represents a satellite
-			var row1 = new GQIRow(new[]
-			{
-				new GQICell { Value = "Galaxy 17" },
-				new GQICell { Value = 0.0 },
-				new GQICell { Value = -91.0 },
-			});
-			var row2 = new GQIRow(new[]
-			{
-				new GQICell { Value = "Thor 7" },
-				new GQICell { Value = 0.0 },
-				new GQICell { Value = 0.8 },
-			});
-			var row3 = new GQIRow(new[]
-			{
-				new GQICell { Value = "Yamal 201" },
-				new GQICell { Value = 0.0 },
-				new GQICell { Value = 90.0 },
-			});
+			// Retrieve satellites from the API
+			var satellites = SatelliteAPI.GetSatellites();
 
-			var rows = new[]
-			{
-				row1,
-				row2,
-				row3,
-			};
+			// Create a row for each satellite
+			var rows = satellites
+				.Select(CreateRow)
+				.ToArray();
 
 			// Give the rows as a single page to the GQI framework
 			return new GQIPage(rows);
+		}
+
+		private GQIRow CreateRow(Satellite satellite)
+		{
+			var position = satellite.GetPosition();
+
+			return new GQIRow(new[]
+			{
+				new GQICell { Value = satellite.Name },
+				new GQICell { Value = position.Latitude },
+				new GQICell { Value = position.Longitude },
+			});
 		}
 	}
 }
