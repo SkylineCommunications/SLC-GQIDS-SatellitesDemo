@@ -19,9 +19,6 @@ namespace Demo
 		// Define a field to store satellites
 		private IReadOnlyList<Satellite> _satellites;
 
-		// Define a field to store the time
-		private DateTime _time;
-
 		// Define a field to store the updater
 		private IGQIUpdater _updater;
 
@@ -81,7 +78,7 @@ namespace Demo
 		{
 			// Use the satellite name as row key
 			var rowKey = satellite.Name;
-			var position = satellite.GetPosition(_time);
+			var position = satellite.GetPosition();
 
 			var cells = new[]
 			{
@@ -113,9 +110,6 @@ namespace Demo
 		{
 			try
 			{
-				// Update the time
-				_time = DateTime.UtcNow;
-
 				// For each satellite
 				foreach (var satellite in _satellites)
 				{
