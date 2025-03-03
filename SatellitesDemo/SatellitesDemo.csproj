@@ -14,7 +14,7 @@
 	<ItemGroup>
 		<PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.5.2.2" />
 		<PackageReference Include="Skyline.DataMiner.Empower.SatellitesDemo" Version="1.0.0-preview" />
-		<PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="1.2.2">
+		<PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="1.2.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
